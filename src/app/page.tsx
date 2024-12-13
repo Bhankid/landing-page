@@ -1,4 +1,6 @@
 import Image from "next/image";
+import FeaturedCard from "./components/FeaturedCard";
+import Quiz from "./components/Quiz";
 
 export default function Home() {
   return (
@@ -59,24 +61,24 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-4xl">
+        <div className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-5xl">
           <table className="min-w-full bg-white">
             <thead>
               <tr>
-                <th className="py-2 px-4 bg-gray-100 text-left text-black">
+                <th className="py-2 px-6 bg-gray-100 text-left text-black">
                   Weekly Update
                 </th>
-                <th className="py-2 px-4 bg-gray-100 text-left"></th>
-                <th className="py-2 px-4 bg-gray-100 text-left"></th>
+                <th className="py-2 px-6 bg-gray-100 text-left"></th>
+                <th className="py-2 px-6 bg-gray-100 text-left"></th>
               </tr>
               <tr>
-                <th className="py-2 px-4 bg-gray-100 text-left text-gray-600">
+                <th className="py-2 px-6 bg-gray-100 text-left text-gray-600">
                   Name
                 </th>
-                <th className="py-2 px-4 bg-gray-100 text-left text-gray-600">
+                <th className="py-2 px-6 bg-gray-100 text-left text-gray-600">
                   Total Rain
                 </th>
-                <th className="py-2 px-4 bg-gray-100 text-left text-gray-600">
+                <th className="py-2 px-6 bg-gray-100 text-left text-gray-600">
                   Rank
                 </th>
               </tr>
@@ -98,15 +100,20 @@ export default function Home() {
                 { name: "0546***058", rain: "₵ 1,797.80", rank: "4th" },
               ].map((item, index) => (
                 <tr key={index} className="border-t">
-                  <td className="py-2 px-4 text-gray-400">{item.name}</td>
-                  <td className="py-2 px-4 text-gray-400">{item.rain}</td>
-                  <td className="py-2 px-4 text-gray-400">{item.rank}</td>
+                  <td className="py-2 px-6 text-gray-400">{item.name}</td>
+                  <td className="py-2 px-6 text-gray-400">{item.rain}</td>
+                  <td className="py-2 px-6 text-gray-400">{item.rank}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </div>
+        {/* Featured */}
+      <FeaturedCard />
+      
+      {/* Quiz */}
+      <Quiz />
     </>
   );
 }
