@@ -3,6 +3,7 @@ import FeaturedCard from "./components/FeaturedCard";
 import Quiz from "./components/Quiz";
 import FeaturedCardMobile from "./components/FeaturedCardMobile";
 import Rank from "./components/Rank";
+import QuizMObile from "./components/QuizMobile";
 
 export default function Home() {
   return (
@@ -25,31 +26,35 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="bg-blue-100 w-full max-w-lg p-4  mx-auto md:block lg:hidden">
-        <div className="bg-white rounded-md shadow-md p-2 flex justify-around items-center mb-6">
+      <div className="bg-blue-100 w-full max-w-lg p-2  mx-auto md:block lg:hidden">
+        <div className="bg-white rounded-md shadow-md p-2 flex justify-around items-center mb-4">
           <div className="flex flex-col items-center">
             <i className="fas fa-home text-gray-400"></i>
-            <span className="text-xs text-gray-500">Home</span>
+            <span className="text-xs text-center text-gray-500">Home</span>
           </div>
           <div className="flex flex-col items-center">
             <i className="fas fa-play-circle text-gray-400"></i>
-            <span className="text-xs text-gray-500">Live Quizzes</span>
+            <span className="text-xs text-center text-gray-500">
+              Live Quizzes
+            </span>
           </div>
           <div className="flex flex-col items-center">
             <i className="fas fa-question-circle text-gray-400"></i>
-            <span className="text-xs text-gray-500">Quizzes</span>
+            <span className="text-xs text-center text-gray-500">Quizzes</span>
           </div>
           <div className="flex flex-col items-center">
             <i className="fas fa-user-circle text-gray-400"></i>
-            <span className="text-xs text-gray-500">My Quizzes</span>
+            <span className="text-xs text-center text-gray-500">
+              My Quizzes
+            </span>
           </div>
           <div className="flex flex-col items-center">
             <i className="fas fa-tv text-gray-400"></i>
-            <span className="text-xs text-gray-500">Virtuals</span>
+            <span className="text-xs text-center text-gray-500">Virtuals</span>
           </div>
           <div className="flex flex-col items-center">
             <i className="fas fa-ellipsis-h text-gray-400"></i>
-            <span className="text-xs text-gray-500">More</span>
+            <span className="text-xs text-center text-gray-500">More</span>
           </div>
         </div>
         <div className="bg-white rounded-full shadow-md p-1 flex items-center mb-4">
@@ -67,6 +72,7 @@ export default function Home() {
       <div className="bg-blue-100 p-4 space-y-4 sm:block md:block lg:hidden xl:hidden ">
         <FeaturedCardMobile />
         <Rank />
+        <QuizMObile />
       </div>
 
       {/* Desktop */}
