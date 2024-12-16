@@ -9,42 +9,42 @@ const Quiz = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-2 justify-items-center">
         <Image
           alt="Three students holding a trophy"
-          className="rounded-lg transition-transform duration-300 transform hover:scale-105" // Added hover effect
+          className="rounded-lg transition-transform duration-300 transform hover:scale-105" 
           height={200}
           src="/Frame 94.png"
           width={300}
         />
         <Image
           alt="Students celebrating with hands raised"
-          className="rounded-lg transition-transform duration-300 transform hover:scale-105" // Added hover effect
+          className="rounded-lg transition-transform duration-300 transform hover:scale-105" 
           height={200}
           src="/Frame 95.png"
           width={300}
         />
         <Image
           alt="A trophy with a red background"
-          className="rounded-lg transition-transform duration-300 transform hover:scale-105" // Added hover effect
+          className="rounded-lg transition-transform duration-300 transform hover:scale-105" 
           height={200}
           src="/Frame 97.png"
           width={300}
         />
         <Image
           alt="A person holding a sign that says 'WE ARE SEVEN A LIVING GOD"
-          className="rounded-lg transition-transform duration-300 transform hover:scale-105" // Added hover effect
+          className="rounded-lg transition-transform duration-300 transform hover:scale-105"
           height={200}
           src="/Frame 96.png"
           width={300}
         />
         <Image
           alt="Three students holding a trophy and smiling"
-          className="rounded-lg transition-transform duration-300 transform hover:scale-105" // Added hover effect
+          className="rounded-lg transition-transform duration-300 transform hover:scale-105" 
           height={200}
           src="/Frame 98.png"
           width={300}
         />
         <Image
           alt="A person holding a sign that says 'WE ARE SEVEN A LIVING GOD ODADIE'"
-          className="rounded-lg transition-transform duration-300 transform hover:scale-105" // Added hover effect
+          className="rounded-lg transition-transform duration-300 transform hover:scale-105" 
           height={200}
           src="/Frame 96.png"
           width={300}

@@ -1,4 +1,4 @@
- const FeaturedCard = () => {
+const FeaturedCardMobile = () => {
   const features = [
     { icon: "fas fa-money-bill-wave", text: "Instant Withdrawals" },
     { icon: "fas fa-headset", text: "24/7 Online Help" },
@@ -8,11 +8,11 @@
   ];
 
   return (
-    <div className="hidden md:flex space-x-4 h-screen bg-white items-center justify-center">
+    <div className="flex overflow-x-auto space-x-4  items-center justify-start p-4 md:hidden">
       {features.map((feature, index) => (
         <div
           key={index}
-          className="bg-blue-50 rounded-lg p-4 flex flex-col items-center justify-center w-48 h-40"
+          className="bg-white rounded-md p-4 flex flex-col items-center justify-center w-48 h-40"
         >
           <i className={`text-blue-600 text-4xl mb-4 ${feature.icon}`}></i>
           <p className="text-blue-600 text-lg font-medium">{feature.text}</p>
@@ -23,4 +23,4 @@
   );
 };
 
-export default FeaturedCard;
+export default FeaturedCardMobile;

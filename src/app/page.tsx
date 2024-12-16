@@ -1,13 +1,78 @@
 import Image from "next/image";
 import FeaturedCard from "./components/FeaturedCard";
 import Quiz from "./components/Quiz";
+import FeaturedCardMobile from "./components/FeaturedCardMobile";
+import Rank from "./components/Rank";
 
 export default function Home() {
   return (
     <>
-      <div className="relative h-screen flex items-center justify-center bg-black">
+      <div className="flex flex-col items-center justify-center bg-black text-center sm:block md:block lg:hidden xl:hidden relative">
+        {" "}
+        {/* Added relative positioning */}
+        <h1 className="text-6xl font-bold text-white mb-4">SmartyBet</h1>
+        <p className="text-lg text-white mb-4">
+          Fixtures, scores and more exciting games.
+          <br />
+          Join with your phone number now!
+        </p>
+        <div className="absolute inset-0">
+          <Image
+            src="/glass.png"
+            alt="Background with people"
+            layout="fill"
+            className="object-cover opacity-50"
+          />
+        </div>
+      </div>
+      <div className="bg-blue-100 w-full max-w-lg p-4  mx-auto md:block lg:hidden">
+        <div className="bg-white rounded-md shadow-md p-2 flex justify-around items-center mb-6">
+          <div className="flex flex-col items-center">
+            <i className="fas fa-home text-gray-400"></i>
+            <span className="text-xs text-gray-500">Home</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <i className="fas fa-play-circle text-gray-400"></i>
+            <span className="text-xs text-gray-500">Live Quizzes</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <i className="fas fa-question-circle text-gray-400"></i>
+            <span className="text-xs text-gray-500">Quizzes</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <i className="fas fa-user-circle text-gray-400"></i>
+            <span className="text-xs text-gray-500">My Quizzes</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <i className="fas fa-tv text-gray-400"></i>
+            <span className="text-xs text-gray-500">Virtuals</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <i className="fas fa-ellipsis-h text-gray-400"></i>
+            <span className="text-xs text-gray-500">More</span>
+          </div>
+        </div>
+        <div className="bg-white rounded-full shadow-md p-1 flex items-center mb-4">
+          <span className="text-gray-500 pl-4">+233</span>
+          <input
+            type="text"
+            placeholder="Enter Mobile Phone Here"
+            className="flex-grow p-1 rounded-full outline-none text-gray-500"
+          />
+        </div>
+        <button className="w-full bg-blue-600 text-white py-2 rounded-full shadow-md">
+          Join Now
+        </button>
+      </div>
+      <div className="bg-blue-100 p-4 space-y-4 sm:block md:block lg:hidden xl:hidden ">
+        <FeaturedCardMobile />
+        <Rank />
+      </div>
+
+      {/* Desktop */}
+      <div className="relative h-screen hidden md:flex  items-center justify-center bg-black">
         <Image
-          src="/glass.png" // Use the local image from the public directory
+          src="/glass.png"
           alt="Background with people"
           layout="fill"
           className="absolute inset-0 object-cover opacity-50"
@@ -36,7 +101,7 @@ export default function Home() {
       </div>
 
       {/* New Content Starts Here */}
-      <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-white">
+      <div className="flex-col items-center hidden md:flex  justify-center min-h-screen p-4 bg-white">
         <h1 className="text-3xl font-bold mb-4 text-black">
           WEEKLY RAIN RANKING
         </h1>
@@ -109,9 +174,9 @@ export default function Home() {
           </table>
         </div>
       </div>
-        {/* Featured */}
+      {/* Featured */}
       <FeaturedCard />
-      
+
       {/* Quiz */}
       <Quiz />
     </>
