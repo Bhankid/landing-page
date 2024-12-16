@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col items-center justify-center bg-black text-center sm:block md:block lg:hidden xl:hidden relative">
-        {" "}
-        {/* Added relative positioning */}
-        <h1 className="text-6xl font-bold text-white mb-4">SmartyBet</h1>
+        <h1 className="text-5xl font-bold text-white mb-4 transparent-text">
+          SmartyBet
+        </h1>
         <p className="text-lg text-white mb-4">
           Fixtures, scores and more exciting games.
           <br />
@@ -84,7 +84,12 @@ export default function Home() {
           className="absolute inset-0 object-cover opacity-50"
         />
         <div className="relative text-center text-white">
-          <h1 className="text-6xl font-bold mb-4">SmartyBet</h1>
+          <h1
+            style={{ fontSize: "9rem" }}
+            className=" font-bold mb-4 transparent-text"
+          >
+            SmartyBet
+          </h1>
           <p className="text-lg mb-6">
             Fixtures, scores and more exciting games.
             <br />

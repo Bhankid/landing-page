@@ -8,14 +8,16 @@ const FeaturedCardMobile = () => {
   ];
 
   return (
-    <div className="flex overflow-x-auto space-x-4  items-center justify-start p-4 md:hidden">
+    <div className="flex overflow-x-auto space-x-4 items-center justify-start p-4 md:hidden hide-scrollbar">
       {features.map((feature, index) => (
         <div
           key={index}
           className="bg-white rounded-md p-4 flex flex-col items-center justify-center w-48 h-40"
         >
           <i className={`text-blue-600 text-4xl mb-4 ${feature.icon}`}></i>
-          <p className="text-blue-600 text-lg font-medium">{feature.text}</p>
+          <p className="text-blue-600 text-lg font-medium whitespace-nowrap">
+            {feature.text}
+          </p>
           <div className="w-8 h-1 bg-blue-600 mt-2"></div>
         </div>
       ))}
